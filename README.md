@@ -7,7 +7,7 @@ It was tested on Debian Testing, it might as well run on your version/distributi
 # What you can do with dlauncher
    1. Quickly search for and run any application installed on your system.
    2. Get a list of all applications.
-   3. Get a list of applications sort by cathegory.
+   3. Get a list of applications sort by category.
 
 # Screenshots
 ![Alt text](https://github.com/DiogenesVX/dlauncher/blob/main/dlauncher.png)
