@@ -2,7 +2,7 @@
 A simple application launcher/browser like dmenu or wofi.
 This is a simple application launcher/browser, it doesn't need any additional configuration.
 I created it for myself to use with sway on Debian. If someone finds it useful for his/her situation, I'd be happy :).
-It was tested on Debian Stable, it might as well run on your version/distribution.
+It was tested on Debian Testing, it might as well run on your version/distribution.
 
 # What you can do with dlauncher
    1. Quickly search for and run any application installed on your system.
@@ -11,8 +11,11 @@ It was tested on Debian Stable, it might as well run on your version/distributio
 
 # Screenshots
 ![Alt text](https://github.com/DiogenesVX/dlauncher/blob/main/dlauncher.png)
+
 ![Alt text](https://github.com/DiogenesVX/dlauncher/blob/main/dlauncher2.png)
+
 ![Alt text](https://github.com/DiogenesVX/dlauncher/blob/main/dlauncher3.png)
+
 ![Alt text](https://github.com/DiogenesVX/dlauncher/blob/main/dlauncher4.png)
 
 # Usage
