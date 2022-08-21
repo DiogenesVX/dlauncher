@@ -24,7 +24,6 @@ It was tested on Debian Testing, it might as well run on your version/distributi
   
       set $menu /opt/dlauncher/dlauncher | xargs swaymsg exec --
       bindsym $mod+space exec $menu ### my combination is $mod+space, you can choose any
-      for_window [app_id="xpad"] floating enable
       for_window [app_id="(?i)yad"] floating enable
   
  Make sure you have the following packages installed:
