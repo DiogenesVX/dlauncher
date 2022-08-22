@@ -127,7 +127,7 @@ appname=$(yad --title='DLauncher (Search Application Name)' \
     --item-separator='\n' \
     --button=$"✔ Show All Applications":"bash -c showall" \
     --field=:CE \
-    "$(egrep -r 'Name' /home/diogenes/.local/share/applications/* \
+    "$(egrep -r 'Name' $HOME/.local/share/applications/* \
     /usr/local/share/applications/* /usr/share/applications/* | \
     grep -F -v "Name[" | \
     grep -F -v "#" | \
@@ -141,7 +141,7 @@ appname=$(yad --title='DLauncher (Search Application Name)' \
     [ $? -ne 0 ] && exit 1
     # executes the .desktop file
     awk '/^Exec=/ {sub("^Exec=", ""); gsub(" ?%[cDdFfikmNnUuv]", ""); exit system($0)}' \
-    $(egrep -r "$appname" /home/diogenes/.local/share/applications/* \
+    $(egrep -r "$appname" $HOME/.local/share/applications/* \
     /usr/local/share/applications/* /usr/share/applications/* | \
     grep -F -v "Name[" | \
     grep -F -v "#" | \
