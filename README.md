@@ -7,7 +7,9 @@ It was tested on Debian Testing, it might as well run on your version/distributi
 # What you can do with dlauncher
    1. Quickly search for and run any application installed on your system.
    2. Get a list of all applications.
-   3. Get a list of applications sort by category.
+   3. Get a list of applications sorted by category.
+   4. Run a quick command (text starting with :text is executed as a command).
+   5. Quick Google search with your default browser (text starting with /text is recognized as a search term).
 
 # Screenshots
 ![Alt text](https://github.com/DiogenesVX/dlauncher/blob/main/dlauncher.png)
