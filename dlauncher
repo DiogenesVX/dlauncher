@@ -1,6 +1,6 @@
 #!/bin/bash
 # DLauncher
-# Requires: yad, coreutils, grep, gawk, sed, bash, findutils, fonts-noto-color-emoji, procps
+# Requires: yad, sed, grep, gawk, bash, procps, coreutils, findutils, galternatives, fonts-noto-color-emoji
 # declaring variables
 export IFS=$'\r\n'
 export YAD_PID=$!
@@ -139,6 +139,18 @@ appname=$(yad --title='DLauncher (Search Application Name)' \
     sed '1s/^/"/;$s/$/"/')")
     # exit on close
     [ $? -ne 0 ] && exit 1
+    # run command or search the web with the default browser
+    if [ $(echo "$appname" | cut -c1) = ":" ]; then
+        echo "running the command"
+        appname=$(echo "$appname" | cut --complement -c1)
+        bash -c "$appname"
+        exit
+    elif [ $(echo "$appname" | cut -c1) = "/" ]; then
+        echo "searching the web"
+        appname=$(echo "$appname" | cut --complement -c1 | sed "s/ /+/g")
+        x-www-browser "http://www.google.com/search?q=$appname"
+        exit
+    fi
     # executes the .desktop file
     awk '/^Exec=/ {sub("^Exec=", ""); gsub(" ?%[cDdFfikmNnUuv]", ""); exit system($0)}' \
     $(egrep -r "$appname" $HOME/.local/share/applications/* \
